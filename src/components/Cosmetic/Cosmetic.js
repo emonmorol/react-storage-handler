@@ -1,5 +1,5 @@
 import React from "react";
-import { addToDatabase } from "../../utilities/fakedb";
+import { addToDatabase, removeFromDatabase } from "../../utilities/fakedb";
 import "./Cosmetic.css";
 
 const Cosmetic = (props) => {
@@ -9,7 +9,7 @@ const Cosmetic = (props) => {
   };
 
   const removeFromCart = (id) => {
-    console.log("removing", id);
+    removeFromDatabase(id);
   };
   //   const addToCartWithParam = () => addToCart(id);
   return (
